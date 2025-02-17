@@ -13,7 +13,17 @@
         <div class="hero-logo">
             <img src="images/logos/earthworks-logo.png" alt="EarthWorks Logo" width="96" height="96">
         </div>
-        
+        <!-- Search container -->
+        <div class="search-container">
+            <input type="text" id="siteSearch" class="search-input" placeholder="Search...">
+            <button onclick="searchSite()" class="search-button">
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                   <circle cx="11" cy="11" r="8"></circle>
+                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+               </svg>
+            </button>
+        </div>        
+
         <!-- Main Title -->
         <h1 class="hero-title">EarthWorks</h1>
         
@@ -26,6 +36,7 @@
         <div class="nav-container">
             <a href="index.html" class="nav-link active">About EarthWorks</a>
             <a href="pages/team.html" class="nav-link">Our Team</a>
+            <a href="pages/faqs.html" class="nav-link">FAQs</a>
             <a href="pages/code.html" class="nav-link">Code and Data</a>
             <a href="pages/papers.html" class="nav-link">Papers & Presentations</a>
             <a href="pages/related.html" class="nav-link">Related Efforts</a>
@@ -36,12 +47,46 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="content-container">
-            <h2 class="section-title">About EarthWorks</h2>
-            <p>
-                EarthWorks is a community-based weather and climate simulation project
-                utilizing a global storm-resolving model. Our mission is to advance
-                atmospheric research through collaborative modeling efforts.
+            <h2 class="section-title">Mission</h2>
+            <p class="mission-text">
+                [Your mission statement here]
             </p>
+
+            <div class="focus-areas">
+                <div class="focus-item">
+                    <img src="images/thumbnails/focus1.jpg" alt="Focus Area 1" class="focus-thumbnail">
+                    <div class="focus-content">
+                        <h3>Focus Area 1</h3>
+                        <p>Description of first focus area with link to details</p>
+                        <a href="#" class="focus-link">Learn More →</a>
+                    </div>
+                </div>
+                <div class="focus-item">
+                    <img src="images/thumbnails/focus1.jpg" alt="Focus Area 1" class="focus-thumbnail">
+                    <div class="focus-content">
+                        <h3>Focus Area 1</h3>
+                        <p>Description of first focus area with link to details</p>
+                        <a href="#" class="focus-link">Learn More →</a>
+                    </div>
+                </div>
+                <div class="focus-item">
+                    <img src="images/thumbnails/focus1.jpg" alt="Focus Area 1" class="focus-thumbnail">
+                    <div class="focus-content">
+                        <h3>Focus Area </h3>
+                        <p>Description of first focus area with link to details</p>
+                        <a href="#" class="focus-link">Learn More →</a>
+                    </div>
+                </div>
+                <div class="focus-item">
+                    <img src="images/thumbnails/focus1.jpg" alt="Focus Area 1" class="focus-thumbnail">
+                    <div class="focus-content">
+                        <h3>Focus Area 4</h3>
+                        <p>Description of first focus area with link to details</p>
+                        <a href="#" class="focus-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -68,5 +113,8 @@
             </div>
         </div>
     </footer>
+
+<script src="/scripts/search.js"></script>
+
 </body>
 </html>

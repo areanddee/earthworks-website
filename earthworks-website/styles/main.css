@@ -15,9 +15,62 @@ body {
 .hero-section {
     position: relative;
     width: 100%;
-    padding-top: 45%; /* Maintains 1920x864 aspect ratio */
-    /* Color removed background-color: #22d3ee; Placeholder color */
+    padding-top: 22%; /* Reduced from 45% to make image shorter */
+    background-color: black;
     overflow: hidden;
+}
+
+/* Add search icon styling */
+.search-icon {
+    position: absolute;
+    top: 1rem;
+    right: 8rem; /* Position it left of the logo */
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.search-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    margin-right: 0.5rem;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.search-results {
+    margin: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.search-results li {
+    margin: 0.5rem 0;
 }
 
 .hero-background {
@@ -32,7 +85,7 @@ body {
 .hero-logo {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    left: 1rem;  /* Changed from right to left */
     z-index: 10;
 }
 
@@ -193,4 +246,154 @@ body {
     margin-top: 0.75rem;
     color: #4b5563;
     font-size: 0.95rem;
+}
+
+.focus-areas {
+    margin-top: 2rem;
+}
+
+.focus-item {
+    display: flex;
+    align-items: start;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8fafc;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+.focus-thumbnail {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    margin-right: 1.5rem;
+}
+
+.focus-content {
+    flex: 1;
+}
+
+.focus-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.team-section {
+    margin-top: 2rem;
+}
+
+.institution-group {
+    margin-bottom: 3rem;
+}
+
+.institution-title {
+    font-size: 1.5rem;
+    color: #2563eb;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.team-member h4 {
+    margin: 0;
+    color: #111827;
+    font-size: 1.1rem;
+}
+
+.team-member p {
+    margin: 0.25rem 0;
+    color: #4b5563;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Updated team grid styles */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.team-member {
+    text-align: center;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+.member-photo {
+    width: 120px;  /* Reduced from 150px */
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
+    object-fit: cover;
+}
+
+/* Organization tabs */
+.org-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.org-tab {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.org-tab.active {
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+    margin-bottom: -2px;
+}
+
+.org-section {
+    display: none;
+}
+
+.org-section.active {
+    display: block;
 }
