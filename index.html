@@ -9,26 +9,32 @@
 <body>
     <!-- Hero Section with Background Image -->
     <div class="hero-section">
-        <!-- EarthWorks Logo -->
-        <div class="hero-logo">
-            <img src="images/logos/earthworks-logo.png" alt="EarthWorks Logo" width="144" height="144">
+        <!-- Left logo on white background -->
+        <div class="hero-logo-left">
+            <img src="images/logos/earthworks-logo.png" alt="EarthWorks Logo" width="120" height="120">
         </div>
-        <!-- Search container -->
-        <div class="search-container">
-            <input type="text" id="siteSearch" class="search-input" placeholder="Search...">
-            <button onclick="searchSite()" class="search-button">
-               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                   <circle cx="11" cy="11" r="8"></circle>
-                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-               </svg>
-            </button>
-        </div>        
-
-        <!-- Main Title -->
-        <h1 class="hero-title">EarthWorks</h1>
+    
+        <!-- Center image container -->
+        <div class="hero-background-container">
+            <img src="images/backgrounds/main-earth.jpg" alt="Earth from Space" class="hero-background">
+            <h1 class="hero-title">EarthWorks</h1>
         
-        <!-- Background Image -->
-        <img src="images/backgrounds/main-earth.jpg" alt="Earth from Space" class="hero-background">
+            <!-- Search container inside image area -->
+            <div class="search-container">
+                <input type="text" id="siteSearch" class="search-input" placeholder="Search...">
+                <button onclick="searchSite()" class="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    
+        <!-- Right side - NSF logo only -->
+        <div class="nsf-container">
+            <img src="images/logos/nsf-logo.png" alt="NSF Logo" class="nsf-logo">
+        </div>
     </div>
 
     <!-- Navigation -->
@@ -62,35 +68,34 @@
                     </div>
                 </div>
                 <div class="focus-item">
-                    <img src="images/thumbnails/focus1.jpg" alt="Focus Area 1" class="focus-thumbnail">
+                    <img src="images/thumbnails/focus1.jpg" alt="Focus Area 2" class="focus-thumbnail">
                     <div class="focus-content">
-                        <h3>Focus Area 1</h3>
-                        <p>Description of first focus area with link to details</p>
+                        <h3>Focus Area 2</h3>
+                        <p>Description of second focus area with link to details</p>
                         <a href="#" class="focus-link">Learn More →</a>
                     </div>
                 </div>
                 <div class="focus-item">
-                    <img src="images/thumbnails/focus1.jpg" alt="Focus Area 1" class="focus-thumbnail">
+                    <img src="images/thumbnails/focus1.jpg" alt="Focus Area 3" class="focus-thumbnail">
                     <div class="focus-content">
-                        <h3>Focus Area </h3>
-                        <p>Description of first focus area with link to details</p>
+                        <h3>Focus Area 3</h3>
+                        <p>Description of third focus area with link to details</p>
                         <a href="#" class="focus-link">Learn More →</a>
                     </div>
                 </div>
                 <div class="focus-item">
-                    <img src="images/thumbnails/focus1.jpg" alt="Focus Area 1" class="focus-thumbnail">
+                    <img src="images/thumbnails/focus1.jpg" alt="Focus Area 4" class="focus-thumbnail">
                     <div class="focus-content">
                         <h3>Focus Area 4</h3>
-                        <p>Description of first focus area with link to details</p>
+                        <p>Description of fourth focus area with link to details</p>
                         <a href="#" class="focus-link">Learn More →</a>
                     </div>
                 </div>
             </div>
-
         </div>
     </main>
 
-    <!-- Footers -->
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-content">
@@ -114,7 +119,6 @@
         </div>
     </footer>
 
-<script src="/scripts/search.js"></script>
-
+    <script src="/scripts/search.js"></script>
 </body>
 </html>

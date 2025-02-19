@@ -9,27 +9,32 @@
 <body>
     <!-- Hero Section with Background Image -->
     <div class="hero-section">
-        <!-- EarthWorks Logo -->
-        <div class="hero-logo">
-            <img src="../images/logos/earthworks-logo.png" alt="EarthWorks Logo" width="96" height="96">
+        <!-- Left logo on white background -->
+        <div class="hero-logo-left">
+            <img src="../images/logos/earthworks-logo.png" alt="EarthWorks Logo" width="120" height="120">
         </div>
-
-        <!-- Main Title -->
-        <h1 class="hero-title">Our Team</h1>
-
-        <!-- Search container -->
-        <div class="search-container">
-            <input type="text" id="siteSearch" class="search-input" placeholder="Search...">
-            <button onclick="searchSite()" class="search-button">
-               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                   <circle cx="11" cy="11" r="8"></circle>
-                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-               </svg>
-            </button>
+    
+        <!-- Center image container -->
+        <div class="hero-background-container">
+            <img src="../images/backgrounds/team-banner.jpg" alt="Team Banner" class="hero-background">
+            <h1 class="hero-title">Our Team</h1>
+        
+            <!-- Search container inside image area -->
+            <div class="search-container">
+                <input type="text" id="siteSearch" class="search-input" placeholder="Search...">
+                <button onclick="searchSite()" class="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
         </div>
-
-        <!-- Background Image -->
-        <img src="../images/backgrounds/team-banner.jpg" alt="Team Banner" class="hero-background">
+    
+        <!-- Right side - NSF logo only -->
+        <div class="nsf-container">
+            <img src="../images/logos/nsf-logo.png" alt="NSF Logo" class="nsf-logo">
+        </div>
     </div>
 
     <!-- Navigation -->
@@ -49,7 +54,7 @@
     <main class="main-content">
         <div class="content-container">
             <h2 class="section-title">Our Team</h2>
-            
+
             <!-- Organization tabs -->
             <div class="org-tabs">
                 <button class="org-tab active" onclick="showOrg('csu')">Colorado State University</button>
@@ -193,7 +198,7 @@
                     <p>Supported by the National Science Foundation</p>
                 </div>
             </div>
-            
+
             <!-- Institution Logos -->
             <div class="institution-logos">
                 <img src="../images/logos/csu-logo.png" alt="CSU Logo" width="311" height="64">
@@ -214,10 +219,10 @@
         document.querySelectorAll('.org-section').forEach(section => {
             section.classList.remove('active');
         });
-        
+
         // Show selected section
         document.getElementById(orgId).classList.add('active');
-        
+
         // Update tab styling
         document.querySelectorAll('.org-tab').forEach(tab => {
             tab.classList.remove('active');
