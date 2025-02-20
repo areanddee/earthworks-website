@@ -166,8 +166,8 @@ body {
 }
 
 .focus-thumbnail {
-    width: 64px;
-    height: 64px;
+    width: 150px;
+    height: 100px;
     object-fit: cover;
     border-radius: 0.25rem;
     margin-right: 1.5rem;
@@ -183,11 +183,15 @@ body {
     font-weight: 500;
 }
 
-/* Footer */
+.focus-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
 .site-footer {
     background-color: #1f2937;
     color: white;
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
     margin-top: 3rem;
 }
 
@@ -211,11 +215,37 @@ body {
     margin-bottom: 1rem;
 }
 
-.institution-logos {
+.contact-section a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+.contact-section a:hover {
+    border-bottom: 1px solid white;
+}
+
+/* Logo strip styling */
+.logo-strip-container {
+    background-color: white;
+    width: 100%;
+    padding: 1.5rem 0;
+    border-radius: 0;
+}
+
+.logo-strip {
+    max-width: 1280px;
+    margin: 0 auto;
     display: flex;
-    justify-content: flex-end;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.logo-strip img {
+    height: 64px;
+    width: auto;
+    display: block;
 }
 
 /* Search results */
@@ -360,6 +390,55 @@ body {
     display: block;
 }
 
+/* Publications and presentations */
+.publication-list, .presentation-list {
+    list-style: none;
+    padding: 0;
+}
+
+.publication-item, .presentation-item {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f8fafc;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+.publication-links, .presentation-links {
+    margin-top: 0.75rem;
+}
+
+.pdf-link, .doi-link, .video-link {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin-right: 0.75rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.pdf-link {
+    background-color: #dc2626;
+    color: white;
+}
+
+.doi-link {
+    background-color: #2563eb;
+    color: white;
+}
+
+.video-link {
+    background-color: #059669;
+    color: white;
+}
+
+.presentation-details {
+    color: #4b5563;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
     .team-grid {
@@ -377,13 +456,22 @@ body {
         grid-template-columns: 1fr;
     }
     
-    .institution-logos {
-        justify-content: center;
+    .logo-strip {
+        flex-wrap: wrap;
     }
 }
 
 @media (max-width: 640px) {
     .team-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .focus-item {
+        flex-direction: column;
+    }
+    
+    .focus-thumbnail {
+        margin-bottom: 1rem;
+        margin-right: 0;
     }
 }

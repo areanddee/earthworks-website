@@ -9,27 +9,32 @@
 <body>
     <!-- Hero Section with Background Image -->
     <div class="hero-section">
-        <!-- EarthWorks Logo -->
-        <div class="hero-logo">
-            <img src="../images/logos/earthworks-logo.png" alt="EarthWorks Logo" width="96" height="96">
+        <!-- Left logo on white background -->
+        <div class="hero-logo-left">
+            <img src="../images/logos/earthworks-logo.png" alt="EarthWorks Logo" width="120" height="120">
         </div>
+    
+        <!-- Center image container -->
+        <div class="hero-background-container">
+            <img src="../images/backgrounds/related-banner.jpg" alt="Related Banner" class="hero-background">
+            <h1 class="hero-title">Related Efforts</h1>
         
-        <!-- Main Title -->
-        <h1 class="hero-title">Related Efforts</h1>
-
-        <!-- Search container -->
-        <div class="search-container">
-            <input type="text" id="siteSearch" class="search-input" placeholder="Search...">
-            <button onclick="searchSite()" class="search-button">
-               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                   <circle cx="11" cy="11" r="8"></circle>
-                   <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-               </svg>
-            </button>
+            <!-- Search container inside image area -->
+            <div class="search-container">
+                <input type="text" id="siteSearch" class="search-input" placeholder="Search...">
+                <button onclick="searchSite()" class="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
         </div>
-        
-        <!-- Background Image -->
-        <img src="../images/backgrounds/related-banner.jpg" alt="Related Banner" class="hero-background">
+    
+        <!-- Right side - NSF logo only -->
+        <div class="nsf-container">
+            <img src="../images/logos/nsf-logo.png" alt="NSF Logo" class="nsf-logo">
+        </div>
     </div>
 
     <!-- Navigation -->
@@ -49,7 +54,7 @@
     <main class="main-content">
         <div class="content-container">
             <h2 class="section-title">Related Efforts</h2>
-            
+
             <div class="repository-section">
                 <h3 class="subsection-title">Modeling Systems</h3>
                 <ul class="repository-list">
@@ -62,8 +67,8 @@
                         <p class="repo-description">Simple Cloud-Resolving E3SM Atmosphere Model (SCREAM) - Short description of Simple Cloud-Resolving E3SM Atmosphere Model (SCREAM).</p>
                     </li>
                     <li>
-                        <strong><a href=" https://sites.google.com/umich.edu/nsf-stormspeed" class="repo-link" target="_blank">StormSpeed</a></strong>
-                        <p class="repo-description">Short description of the NSF StormSpeed Project.</p>
+                        <strong><a href=" https://sites.google.com/umich.edu/nsf-stormspeed" class="repo-link" target="_blank">StormSPEED</a></strong>
+                        <p class="repo-description">Short description of the NSF StormSPEED Project.</p>
                     </li>
                     <li>
                         <strong><a href="https://sima.ucar.edu" class="repo-link" target="_blank">SIMA</a></strong>
@@ -102,7 +107,7 @@
                     <p>Supported by the National Science Foundation</p>
                 </div>
             </div>
-            
+
             <!-- Institution Logos -->
             <div class="institution-logos">
                 <img src="../images/logos/csu-logo.png" alt="CSU Logo" width="311" height="64">
@@ -111,14 +116,14 @@
             </div>
         </div>
     </footer>
-<script>
-function searchSite() {
-    const searchTerm = document.getElementById('siteSearch').value;
-    console.log('Searching for:', searchTerm);
-}
-</script>
 
-<script src="/scripts/search.js"></script>
+    <script>
+    function searchSite() {
+        const searchTerm = document.getElementById('siteSearch').value;
+        console.log('Searching for:', searchTerm);
+    }
+    </script>
 
+    <script src="/scripts/search.js"></script>
 </body>
 </html>
